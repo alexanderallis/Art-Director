@@ -62,7 +62,7 @@ header{
       //ELEMENT SHRINKS
     }
     @include for-tablet-portrait-down{
-      width:6em;
+      width:5em;
       vertical-align: middle;
       margin-left:-.2em; //this closes the gap between the logo and the menu
       border-radius:0 4px 4px 0;
@@ -84,7 +84,7 @@ header{
     @include for-tablet-portrait-down{
       vertical-align: middle;
       // border:solid thin red;
-      font-size:2.2em;
+      font-size:2em;
       color:white;
       margin-top:-.05em;
       margin-left:1em;
