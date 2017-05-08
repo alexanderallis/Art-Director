@@ -20,10 +20,10 @@
 header{
   background-color: rgb(255,255,255);
   border-bottom:solid thin lightgrey;
-  height:3.5em;
+  height:10em;
   position: fixed;
   top:0;
-  width:100%;
+  width:98%;
   font-family: "Georgia", serif;
   border:solid thin red;
   -webkit-transition: all 0.25s ease-in-out;
@@ -38,16 +38,13 @@ header{
 
 .header-left{
   float:left;
+  margin-top:2.8em;
   // border:solid thin red;
-  @include for-tablet-portrait-down{
-    position:fixed;
-    top:2em;
-  }
 }
 
   .logo-container{
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     width:8em;
     background-color: white;
     border:solid thin lightgrey;
@@ -57,60 +54,20 @@ header{
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
-    @include for-tablet-landscape-down{
-      width:5em;
-      //ELEMENT SHRINKS
-    }
-    @include for-tablet-portrait-down{
-      width:5em;
-      vertical-align: middle;
-      margin-left:-.2em; //this closes the gap between the logo and the menu
-      border-radius:0 4px 4px 0;
-    }
   }
 
   .title{
     display: inline-block;
     margin-top:.75em;
     margin-left:1.3em;
-    font-size: 1.6em;
+    font-size:2em;
     color: #4A4B4C;
     font-style: italic;
-    @include for-tablet-landscape-down{
-      font-size: 1.4em;
-      margin-top:.8em;
-      //ELEMENT SHRINKS
-    }
-    @include for-tablet-portrait-down{
-      vertical-align: middle;
-      // border:solid thin red;
-      font-size:2em;
-      color:white;
-      margin-top:-.05em;
-      margin-left:1em;
-    }
   }
 
 .header-right{
   float:right;
-  @include for-big-desktop-up{
-    float:left;
-    margin-left:6em;
-    //MOVE NAV TO LEFT SIDE OF SCREEN AND PROVIDE SOME EXTRA SPACE ON THE LEFT
-  }
-  @include for-tablet-landscape-down{
-    margin-right:1em;
-    //ADD SOME EXTRA ROOM ON THE RIGHT OF THE NAV
-  }
-  @include for-tablet-portrait-down{
-    float:none;
-    position: absolute;
-    left:-30%;
-    height:100vh;
-    width:30%;
-    background-color: white;
-    //GET RID OF FLOAT AND MAKE IT TALL
-  }
+  margin-top:4.5em;
 }
 
   header nav{
@@ -125,166 +82,26 @@ header{
     margin-right:2.7em;
     margin-left:2.7em;
     font-size:.7em;
-    @include for-tablet-landscape-down{
-      margin-right:1.7em;
-      margin-left:1.7em;
-      font-size: .8em;
-      //DECREASE SPACE BETWEEN ELEMENTS AND SHRINK FONT SIZE
-    }
-    @include for-tablet-portrait-down{
-      display:block;
-      margin-top:4em;
-      margin-bottom:4em;
-      font-size:1em;
-    }
   }
 
   .social{
     display: inline-block;
     margin-top:1.5em;
     margin-right:1em;
-    margin-left:2em;
+    margin-left:4em;
     margin-bottom:-.2em;
     vertical-align: middle;
-    @include for-tablet-landscape-down{
-        position:fixed;
-        bottom:3.5em;
-        right:2em;
-        display:none;
-        //HIDE SOCIAL SECTION
-    }
-    @include for-tablet-portrait-down{
-        margin-right:0;
-    }
   }
 
   .social svg {
     display: inline-block;
     height:.75em;
     margin-right:1em;
-    @include for-tablet-landscape-down{
-      display:block;
-      height:1em;
-      margin-top:1em;
-    }
-    @include for-tablet-portrait-down{
-      height:1.3em;
-    }
   }
 
-  .social-2{
-    display:none;
-    @include for-tablet-landscape-down{
-      display: block;
-      position:fixed;
-      bottom:3em;
-      right:2em;
-    }
+  body{
+    margin-top:10em;
+    margin-left:1%;
+    margin-right:1%;
+    width:98%;
   }
-
-  .social-2 svg {
-    display: inline-block;
-    height:.75em;
-    margin-right:1em;
-    @include for-tablet-landscape-down{
-      display:block;
-      height:1em;
-      margin-top:1em;
-    }
-    @include for-tablet-portrait-down{
-      height:1.3em;
-    }
-  }
-
-//---------------------------------------
-// -----------------BODY-----------------
-//---------------------------------------
-
-body{
-  // border:solid thin red;
-  margin-top:3.6em;
-  @include for-tablet-portrait-down{
-    margin-top:0;
-  }
-}
-
-// .darken-modal{
-//   background-color: rgba(0,0,0,.8);
-//   position:absolute;
-//   top:0;
-//   left:0;
-//   right:-1em;
-//   bottom:0;
-//   z-index: 0;
-//   // display:none;
-// }
-
-  .headline-projects-container{
-    width:100%;
-    padding-bottom:.5%;
-
-    @include for-tablet-portrait-down{
-      padding:0;
-    }
-  }
-
-  .headline-left{
-    display: inline-block;
-    width:49.75%;
-    margin-right:.25%;
-    @include for-tablet-portrait-down{
-      width:100%;
-      margin-bottom:1em;
-    }
-  }
-  .headline-right{
-    display: inline-block;
-    width:49.75%;
-    margin-left:.25%;
-    @include for-tablet-portrait-down{
-      width:100%;
-      margin-bottom:1em;
-    }
-  }
-
-  //BODY-PROJECTS-CONTAINER-----------------------------------
-
-  .projects-container{
-    width:100%;
-    padding-bottom:.6%;
-    @include for-tablet-portrait-down{
-      padding:0;
-    }
-  }
-
-      $margin: .4%;
-
-      .projects-container div{
-        width:33.066%;
-        display: inline-block;
-        margin-right: $margin;
-        margin-bottom: .5%;
-        @include for-tablet-portrait-down{
-          margin-left:0;
-          margin-right:0;
-          margin-bottom: 2.5%;
-          width:100%;
-        }
-      }
-
-      .projects-container div:nth-child(3n+1){
-        margin-right:$margin;
-        margin-left:0;
-        @include for-tablet-portrait-down{
-          margin-left:0;
-          margin-right:0;
-        }
-      }
-
-      .projects-container div:nth-child(3n+3){
-        margin-right:0;
-      }
-
-      .body-project-image img{
-        width:100%;
-      }
